@@ -27,11 +27,7 @@ export const MobileNav = () => {
             >
               Solicitar Orçamento
             </Link>
-            <Nav
-              containerStyles="flex flex-col items-center gap-y-6"
-              linkStyles="text-2xl"
-              onLinkClick={handleLinkClick}
-            />
+            <Nav />
           </div>
           <Socials containerStyles="flex gap-x-4" iconsStyles="text-2xl" />
         </div>
