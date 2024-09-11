@@ -7,13 +7,34 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      xs: "320px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+      "3xl": "1920px",
+    },
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        border: "#384261",
+        transparent: 'transparent',
+        background: "#2C2231",
+        primary: "#008080",
+        secondary: "#0a5c5c",
+        tertiary: "#025D8A",
+        quaternary: "#027588",
+        quinary: "#463620",
+      },
+      rotate: {
+        270: '270deg',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("tailwind-scrollbar"),
+  ],
 };
 export default config;
