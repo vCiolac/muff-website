@@ -30,6 +30,9 @@ const config: Config = {
       rotate: {
         270: '270deg',
       },
+      scale: {
+        '130': '1.30',
+      },
     },
   },
   plugins: [

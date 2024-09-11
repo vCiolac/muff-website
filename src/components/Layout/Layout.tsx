@@ -4,21 +4,24 @@ import Transition from '../Others/Transition/Transition';
 import MainContent from '../Others/MainBox/MainContent';
 import LeftSidebar from '../Others/SideBars/LeftSidebar';
 import RightSidebar from '../Others/SideBars/RightSidebar';
+import { GlobalProvider } from '@/context/GlobalContext';
 
 const Layout = ({ children }: ChildrenInterface) => {
   return (
-    <Transition>
-      <div className="min-h-screen flex flex-col overflow-hidden">
-        <Header />
-        <div className="flex flex-1 pt-32">
-          <LeftSidebar />
-          <MainContent>
-            {children}
-          </MainContent>
-          <RightSidebar />
+    <GlobalProvider>
+      <Transition>
+        <div className="min-h-screen flex flex-col overflow-hidden">
+          <Header />
+          <div className="flex flex-1">
+            <LeftSidebar />
+            <MainContent>
+              {children}
+            </MainContent>
+            <RightSidebar />
+          </div>
         </div>
-      </div>
-    </Transition>
+      </Transition>
+    </GlobalProvider>
   );
 };
 
