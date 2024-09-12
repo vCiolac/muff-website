@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export default function AboutContent() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-700 text-white p-2 rounded-xl">
-      <header className="container mx-auto py-16 text-center">
+      <header className="container mx-auto py-4 text-center">
         <motion.h1
           className="text-5xl font-bold mb-8"
           initial={{ opacity: 0 }}

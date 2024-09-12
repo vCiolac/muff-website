@@ -31,6 +31,7 @@ const RightSidebar = () => {
         fill
         style={{ objectFit: 'contain' }}
         className="relative z-20 transform scale-125 ml-[-3rem]"
+        priority={true}
       />
       <nav className="absolute inset-0 flex items-center justify-center z-20 ml-[-3rem] max-w-60 text-center">
         <div className="flex flex-col space-y-4">

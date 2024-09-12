@@ -5,7 +5,7 @@ export default function HomeContent() {
   return (
     <div className="min-h-screen text-black">
       {/* Header Section */}
-      <header className="container mx-auto py-12 text-center">
+      <header className="container mx-auto text-center">
         <motion.h1
           className="text-5xl font-bold mb-4"
           initial={{ opacity: 0, y: -50 }}
@@ -27,7 +27,7 @@ export default function HomeContent() {
           animate={{ scale: 1 }}
           transition={{ delay: 0.5, duration: 0.5 }}
         >
-          <Link href="#" className="bg-blue-600 px-6 py-3 rounded-lg text-xl font-semibold hover:bg-blue-800 transition">
+          <Link href="#" className="bg-blue-600 px-1 md:px-6 py-3 rounded-lg text-xl font-semibold hover:bg-blue-800 transition">
               Conheça os Campeões
           </Link>
         </motion.div>

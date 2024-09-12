@@ -46,3 +46,48 @@
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+.text-stroke {
+  -webkit-text-stroke: 1px black;
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 1px white;
+}
+
+@keyframes fillAnimation {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+@layer components {
+  .animate-background {
+    position: relative;
+    color: black;
+  }
+
+  .animate-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #360F06 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    border-radius: 1rem;
+    z-index: -1;
+    transition: background-position 0.3s ease;
+    pointer-events: none;
+  }
+
+  .animate-background:hover::before {
+    background-position: -100% 0;
+  }
+}
+

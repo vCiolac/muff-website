@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MobileNav } from "../Nav/MobileNav";
+import { OpenMobileNav } from "../Nav/OpenMobileNav";
 import Nav from "../Nav/Nav";
 
 const Header = () => {
@@ -15,7 +15,7 @@ const Header = () => {
         <Nav />
       </div>
       <div className="flex md:hidden items-center justify-center mb-2">
-        <MobileNav />
+        <OpenMobileNav />
       </div>
       <div className="w-full h-3 bg-pattern border border-black" />
     </motion.header>

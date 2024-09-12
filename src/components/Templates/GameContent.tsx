@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export default function GameContent() {
   return (
     <div className="min-h-screen p-2">
-      <header className="container mx-auto py-16 text-center">
+      <header className="container mx-auto text-center">
         <motion.h1
           className="text-5xl font-bold mb-8"
           initial={{ opacity: 0 }}

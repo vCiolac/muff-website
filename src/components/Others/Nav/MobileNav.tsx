@@ -1,23 +1,44 @@
-import { useState } from "react";
-import { RiAlignJustify } from "react-icons/ri";
-import Nav from "@/components/Others/Nav/Nav";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/Others/UI/sheet";
+import { useGlobalContext } from '@/context/GlobalContext';
+import Image from 'next/image';
+import { links } from '@/data/nav';
+import { motion } from 'framer-motion';
 
-export const MobileNav = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const MobileNav = () => {
+  const { setSelectedNavItem } = useGlobalContext();
+
+  const handleButtonClick = (item: string) => {
+    setSelectedNavItem(item);
+  };
 
   return (
-    <Sheet open={isOpen} onOpenChange={setIsOpen}>
-      <SheetTrigger>
-        <RiAlignJustify className="cursor-pointer text-3xl text-white" />
-      </SheetTrigger>
-      <SheetContent>
-        <div className="flex flex-col items-center justify-between py-4 mt-44 ml-20">
-          <div className="flex flex-col items-center gap-y-8">
-            <Nav />
+    <nav className="flex flex-col gap-y-5 justify-center items-center">
+      {links.map((link, index) => (
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          key={index}
+          className="flex items-center w-52 h-16 px-4 py-2 bg-gray-900 bg-opacity-20 rounded-lg text-white"
+          aria-label={link.name}
+          onClick={() => handleButtonClick(link.key)}
+        >
+          <div className="flex-shrink-0 mr-4">
+            <Image
+              src={link.image}
+              alt={link.name}
+              width={60} 
+              height={60}
+              style={{ objectFit: 'contain' }}
+              className="object-contain"
+            />
           </div>
-        </div>
-      </SheetContent>
-    </Sheet>
+
+          <span className="text-lg font-extrabold">
+            {link.name}
+          </span>
+        </motion.button>
+      ))}
+    </nav>
   );
 };
+
+export default MobileNav;
