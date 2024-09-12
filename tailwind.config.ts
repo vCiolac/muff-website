@@ -31,8 +31,14 @@ const config: Config = {
         270: '270deg',
       },
       scale: {
+        '80' : '0.8',
         '130': '1.30',
         '150': '1.50',
+      },
+      fontFamily: {
+        'paper': ['paper', 'sans-serif'],
+        'oldPaper': ['oldPaper', 'sans-serif'],
+        'toxType': ['toxType', 'sans-serif'],
       },
     },
   },

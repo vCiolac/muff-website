@@ -10,7 +10,7 @@ export default function CharactersContent() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="font-toxType min-h-screen">
       <header className="container mx-auto text-center">
         <motion.h1
           className="text-5xl font-bold mb-8"

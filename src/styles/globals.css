@@ -91,3 +91,23 @@
   }
 }
 
+@font-face {
+  font-family: 'paper';
+  src: url('/fonts/1942.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'oldPaper';
+  src: url('/fonts/OldNewspaperTypes.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'toxType';
+  src: url('/fonts/ToxTypewriter.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

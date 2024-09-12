@@ -8,7 +8,15 @@ const RightSidebar = () => {
   const renderContent = () => {
     switch (selectedScrollItem) {
       case 'map':
-        return <p>Imagem do Mapa</p>;
+        return <div>
+          <Image
+            src="/foto_mapa.jpg"
+            alt="Map"
+            width={400}
+            height={400}
+            className="rounded-xl px-1 opacity-90"
+            priority={true} />
+        </div>;
       case 'lore':
         return <p>Texto sobre Lore</p>;
       case 'home':
@@ -35,7 +43,7 @@ const RightSidebar = () => {
       />
       <nav className="absolute inset-0 flex items-center justify-center z-20 ml-[-3rem] max-w-60 text-center">
         <div className="flex flex-col space-y-4">
-          <div className="p-6">
+          <div className="p-6 font-toxType">
             {renderContent()}
           </div>
         </div>

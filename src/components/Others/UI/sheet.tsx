@@ -61,7 +61,7 @@ const SheetContent = React.forwardRef<
       ref={ref}
       className={cn(
         sheetVariants({ side }),
-        "bg-[url('/right-scroll.png')] bg-cover bg-no-repeat",
+        "bg-[url('/right-scroll.png')] bg-cover bg-no-repeat scale-110",
         className
       )}
       {...props}

@@ -29,7 +29,6 @@ const LeftSidebar = () => {
               key={key}
               onClick={() => setSelectedScrollItem(key)}
               className={`flex items-center text-black text-lg py-2 space-x-2`}
-              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <Image
@@ -41,7 +40,7 @@ const LeftSidebar = () => {
                 className="relative z-20 scale-150 mr-1"
                 priority={true}
               />
-              <span className='shadow-md py-2 px-4 rounded-2xl animate-background'>{name}</span>
+              <span className='shadow-md py-2 px-4 rounded-2xl animate-background font-toxType font-semibold text-gray-800 text-xl'>{name}</span>
             </motion.button>
           ))}
         </div>

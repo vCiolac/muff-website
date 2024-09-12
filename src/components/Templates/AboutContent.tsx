@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function AboutContent() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-700 text-white p-2 rounded-xl">
+    <div className="font-toxType min-h-screen bg-gradient-to-b from-gray-900 to-gray-700 text-white p-2 rounded-xl">
       <header className="container mx-auto py-4 text-center">
         <motion.h1
           className="text-5xl font-bold mb-8"
@@ -22,7 +22,7 @@ export default function AboutContent() {
           e divertidas. Nosso objetivo é transportar jogadores para universos
           repletos de aventuras e desafios. Somos um estúdio dedicado a
           explorar novas formas de contar histórias e envolver nossos jogadores
-          com personagens marcantes e cenários surpreendentes.
+          com personagens marcantes e jogabilidade surpreendente.
         </motion.p>
       </header>
 

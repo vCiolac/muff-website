@@ -13,7 +13,7 @@ export const OpenMobileNav = () => {
       </SheetTrigger>
       <SheetContent>
         <div className="flex flex-col items-center justify-between py-4 mt-16 ml-20">
-          <div className="flex flex-col items-center transform scale-90">
+          <div className="flex flex-col items-center transform scale-80">
             <MobileNav />
           </div>
         </div>

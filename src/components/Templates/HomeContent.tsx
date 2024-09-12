@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function HomeContent() {
   return (
-    <div className="min-h-screen text-black">
+    <div className="min-h-screen text-black font-toxType">
       {/* Header Section */}
       <header className="container mx-auto text-center">
         <motion.h1
@@ -27,7 +27,7 @@ export default function HomeContent() {
           animate={{ scale: 1 }}
           transition={{ delay: 0.5, duration: 0.5 }}
         >
-          <Link href="#" className="bg-blue-600 px-1 md:px-6 py-3 rounded-lg text-xl font-semibold hover:bg-blue-800 transition">
+          <Link href="#" className="bg-blue-600 px-1 md:px-6 py-3 rounded-lg text-xl font-semibold hover:bg-blue-800 transition transform scale-80">
               Conheça os Campeões
           </Link>
         </motion.div>
