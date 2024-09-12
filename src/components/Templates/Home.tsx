@@ -1,7 +1,10 @@
 import { useGlobalContext } from '@/context/GlobalContext';
 import AboutContent from './AboutContent';
-import ContactContent from './ContactContent';
 import HomeContent from './HomeContent';
+import GameContent from './GameContent';
+import CharactersContent from './CharactersContent';
+import MonstersContent from './MonstersContent';
+import DonationContent from './DonationContent';
 
 
 const Home = () => {
@@ -11,10 +14,16 @@ const Home = () => {
     switch (selectedNavItem) {
       case 'home':
         return <HomeContent />;
+      case 'game':
+        return <GameContent />;
       case 'about':
         return <AboutContent />;
-      case 'contact':
-        return <ContactContent />;
+      case 'donation':
+        return <DonationContent />
+      case 'characters':
+        return <CharactersContent />
+      case 'monsters':
+        return <MonstersContent />;
       default:
         return <p>Selecione um item no menu.</p>;
     }

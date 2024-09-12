@@ -1,16 +1,21 @@
 import { ChildrenInterface } from '@/interfaces/ChildrenInterface';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const MainContent = ({ children }: ChildrenInterface) => {
 
   return (
-    <section className="md:relative flex-1 md:mt-32 mb-3">
+    <motion.section
+      initial={{ scale: 0.5, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 3 }}
+      className="md:relative flex-1 md:mt-32 mb-3">
       <div className="hidden md:block absolute inset-0">
         <Image
           src="/mainContent-desktop.png"
           alt="Background Frame Desktop"
-          layout="fill"
-          objectFit="contain"
+          fill
+          style={{ objectFit: 'contain' }}
           className="z-0"
           priority={true}
         />
@@ -21,8 +26,8 @@ const MainContent = ({ children }: ChildrenInterface) => {
           <Image
             src="/mainContent-mobile.png"
             alt="Background Frame Mobile"
-            layout="fill"
-            objectFit="contain"
+            fill
+            style={{ objectFit: 'contain' }}
             className="z-0"
             priority={true}
           />
@@ -35,7 +40,7 @@ const MainContent = ({ children }: ChildrenInterface) => {
           </div>
         </div>
       </main>
-    </section>
+    </motion.section>
   );
 };
 

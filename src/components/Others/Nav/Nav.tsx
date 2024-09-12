@@ -24,8 +24,8 @@ const Nav = () => {
           <Image
             src="/button.png"
             alt="Button"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: 'cover' }}
             className="object-cover"
           />
         </button>

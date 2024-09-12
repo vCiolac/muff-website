@@ -1,9 +1,8 @@
 import { createContext, useState, ReactNode, useContext } from 'react';
-import { contentData } from '@/data/sidebars';
 
 interface GlobalContextType {
-  selectedContent: keyof typeof contentData;
-  setSelectedContent: (content: keyof typeof contentData) => void;
+  selectedScrollItem: string;
+  setSelectedScrollItem: (content: string) => void;
   selectedNavItem: string;
   setSelectedNavItem: (item: string) => void;
 }
@@ -11,11 +10,11 @@ interface GlobalContextType {
 const GlobalContext = createContext<GlobalContextType | undefined>(undefined);
 
 export const GlobalProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [selectedContent, setSelectedContent] = useState<keyof typeof contentData>('inventory');
+  const [selectedScrollItem, setSelectedScrollItem] = useState<string>('map');
   const [selectedNavItem, setSelectedNavItem] = useState<string>('home');
 
   return (
-    <GlobalContext.Provider value={{ selectedContent, setSelectedContent, selectedNavItem, setSelectedNavItem }}>
+    <GlobalContext.Provider value={{ selectedScrollItem, setSelectedScrollItem, selectedNavItem, setSelectedNavItem }}>
       {children}
     </GlobalContext.Provider>
   );
