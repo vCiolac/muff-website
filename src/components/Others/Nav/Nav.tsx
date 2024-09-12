@@ -10,11 +10,11 @@ const Nav = () => {
   };
 
   return (
-    <nav className="hidden xl:flex gap-x-6 justify-center items-center">
+    <nav className="flex flex-col gap-y-6 justify-center items-center xl:flex-row xl:gap-x-6">
       {links.map((link, index) => (
         <button
           key={index}
-          className="relative flex items-center justify-center w-40"
+          className="relative flex items-center justify-center w-40 h-16 md:h-6"
           aria-label={link.name}
           onClick={() => handleButtonClick(link.key)}
         >

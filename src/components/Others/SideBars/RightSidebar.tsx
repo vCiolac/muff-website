@@ -6,7 +6,7 @@ const RightSidebar = () => {
   const { selectedContent } = useGlobalContext();
 
   return (
-    <div className="hidden lg:flex lg:w-1/5 relative mt-28">
+    <div className="hidden lg:flex lg:w-1/5 relative mt-20">
       <Image
         src="/right-scroll.png"
         alt="Right Scroll"

@@ -61,14 +61,14 @@ const SheetContent = React.forwardRef<
       ref={ref}
       className={cn(
         sheetVariants({ side }),
-        "bg-[url('/right-scroll.jpg')] bg-cover bg-no-repeat",
+        "bg-[url('/right-scroll.png')] bg-cover bg-no-repeat",
         className
       )}
       {...props}
     >
       {children}
-      <SheetPrimitive.Close className="absolute right-14 top-28 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-red-600">
-        <RiCloseFill className="h-8 w-8 bg-red-800 rounded-xl p-1" />
+      <SheetPrimitive.Close className="absolute right-6 top-32 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-red-600">
+        <RiCloseFill className="h-8 w-8 rounded-xl p-1" />
         <span className="sr-only">Close</span>
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>

@@ -7,7 +7,7 @@ const LeftSidebar = () => {
   const { setSelectedContent } = useGlobalContext();
 
   return (
-    <div className="hidden lg:flex lg:w-1/5 relative mt-28">
+    <div className="hidden lg:flex lg:w-1/5 relative mt-20">
       <Image
         src="/left-scroll.png"
         alt="Left Scroll"

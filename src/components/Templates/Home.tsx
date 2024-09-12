@@ -21,7 +21,7 @@ const Home = () => {
   };
 
   return (
-    <section className='p-12'>
+    <section>
       {renderContent()}
     </section>
   );
