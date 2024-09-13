@@ -45,7 +45,7 @@ const MainContent = ({ children }: ChildrenInterface) => {
 
         {/* Conteúdo que rola */}
         <div className="relative z-10 flex items-center justify-center hide-scrollbar overflow-y-auto lg:mt-0 mt-12">
-          <div className="transform scale-[0.95] px-20 md:px-0 max-h-[74vh] lg:max-h-[62vh] max-w-sm md:max-w-lg ">
+          <div className="transform scale-[0.95] px-20 md:px-0 max-h-[74vh] lg:max-h-[62vh] max-w-sm md:max-w-lg">
             {children}
           </div>
         </div>

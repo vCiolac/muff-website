@@ -1,6 +1,7 @@
 import { useGlobalContext } from '@/context/GlobalContext';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { PromoteText1, PromoteText2, PromoteText3 } from '@/components/Templates/ScrollsContents/PromoteText';
 
 const RightSidebar = () => {
   const { selectedScrollItem } = useGlobalContext();
@@ -8,19 +9,11 @@ const RightSidebar = () => {
   const renderContent = () => {
     switch (selectedScrollItem) {
       case 'map':
-        return <div>
-          <Image
-            src="/foto_mapa.jpg"
-            alt="Map"
-            width={160}
-            height={160}
-            className="rounded-xl px-1 opacity-90"
-            priority={true} />
-        </div>;
+        return <PromoteText1 />;
       case 'lore':
-        return <p>Texto sobre Lore</p>;
+        return <PromoteText2 />;
       case 'home':
-        return <p>Sobre a Casa</p>;
+        return <PromoteText3 />;
       default:
         return <p>Selecione um item no menu.</p>;
     }
@@ -41,9 +34,9 @@ const RightSidebar = () => {
         className="relative z-20"
         priority={true}
       />
-      <nav className="flex items-center align-middle justify-center z-20">
+      <nav className="flex items-center align-middle justify-center z-20 max-w-40 mt-4">
         <div className="flex flex-col space-y-4 mr-4">
-          <div className="font-toxType py-2">
+          <div className="px-20 md:px-0 max-h-[74vh] lg:max-h-[50vh] overflow-y-auto hide-scrollbar">
             {renderContent()}
           </div>
         </div>
