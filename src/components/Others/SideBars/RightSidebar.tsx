@@ -12,8 +12,8 @@ const RightSidebar = () => {
           <Image
             src="/foto_mapa.jpg"
             alt="Map"
-            width={400}
-            height={400}
+            width={160}
+            height={160}
             className="rounded-xl px-1 opacity-90"
             priority={true} />
         </div>;
@@ -31,19 +31,19 @@ const RightSidebar = () => {
       initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 2 }}
-      className="hidden lg:flex lg:w-1/5 relative mt-[7rem]"
+      className="hidden lg:flex lg:w-1/4 items-center align-middle justify-center relative mr-8"
     >
       <Image
         src="/right-scroll.png"
         alt="Right Scroll"
         fill
         style={{ objectFit: 'contain' }}
-        className="relative z-20 transform scale-125 ml-[-3rem]"
+        className="relative z-20"
         priority={true}
       />
-      <nav className="absolute inset-0 flex items-center justify-center z-20 ml-[-3rem] max-w-60 text-center">
-        <div className="flex flex-col space-y-4">
-          <div className="p-6 font-toxType">
+      <nav className="flex items-center align-middle justify-center z-20">
+        <div className="flex flex-col space-y-4 mr-4">
+          <div className="font-toxType py-2">
             {renderContent()}
           </div>
         </div>

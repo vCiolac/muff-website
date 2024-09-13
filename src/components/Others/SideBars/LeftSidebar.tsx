@@ -12,18 +12,18 @@ const LeftSidebar = () => {
       initial={{ opacity: 0, x: -100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 2 }}
-      className="hidden lg:flex lg:w-1/5 relative mt-[7rem]"
+      className="hidden lg:flex lg:w-1/4 items-center align-middle justify-center relative ml-8"
     >
       <Image
         src="/left-scroll.png"
         alt="Left Scroll"
         fill
         style={{ objectFit: 'contain' }}
-        className="relative z-20 scale-125 ml-16"
+        className="relative z-20"
         priority={true}
       />
-      <nav className="absolute inset-0 flex items-center justify-center p-6 z-20 ml-24">
-        <div className="flex flex-col space-y-8">
+      <nav className="flex items-center align-middle justify-center z-20">
+        <div className="flex flex-col space-y-8 mr-4">
           {sideItems.map(({ name, key, image }) => (
             <motion.button
               key={key}

@@ -12,7 +12,7 @@ const Layout = ({ children }: ChildrenInterface) => {
       <Transition>
         <div className="min-h-screen flex flex-col overflow-hidden">
           <Header />
-          <div className="flex flex-1">
+          <div className="flex pt-14 md:pt-28 min-h-screen max-h-screen justify-center">
             <LeftSidebar />
             <MainContent>
               {children}

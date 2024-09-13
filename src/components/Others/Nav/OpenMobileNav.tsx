@@ -12,7 +12,7 @@ export const OpenMobileNav = () => {
         <RiAlignJustify className="cursor-pointer text-3xl text-white" />
       </SheetTrigger>
       <SheetContent>
-        <div className="flex flex-col items-center justify-between py-4 mt-16 ml-20">
+        <div className="flex flex-col items-center justify-between py-4 mt-[2.75rem] ml-20">
           <div className="flex flex-col items-center transform scale-80">
             <MobileNav />
           </div>
